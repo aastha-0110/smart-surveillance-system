@@ -21,9 +21,9 @@ if not os.path.exists(log_file):
 # Open webcam
 cap = cv2.VideoCapture(0)
 if not cap.isOpened():
-    print("❌ Could not open webcam.")
+    print(" Could not open webcam!!!!!.")
     exit()
-print("✅ Surveillance started. Press 'q' to quit.")
+print(" Surveillance started...... Press 'q' to quit.")
 while True:
     ret, frame = cap.read()
     if not ret or frame is None:
@@ -47,7 +47,7 @@ while True:
     cv2.imshow("Smart Surveillance", annotated_frame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
-        print("👋 Quitting surveillance.")
+        print(" Quitting surveillance.........")
         break
 
 cap.release()
